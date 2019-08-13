@@ -1,9 +1,9 @@
-# TO-DO: Complete the selection_sort() function below
-
 # ***Selection Sort*** arrange items from smallest to largest.
 # Find the smallest item, put it on the far left side.
 # Then, find second smallest and insert it directly to the right of smallest.
 # You repeat this process, till items are sorted.
+# TO-DO: Complete the selection_sort() function below
+
 
 def selection_sort(arr):
     # loop through n-1 elements
@@ -16,15 +16,18 @@ def selection_sort(arr):
         # Start at range (i + 1) for the next element
         for j in range(i + 1, len(arr)):
             if arr[j] < arr[smallest_index]:
+                # if the current item is smaller than the smallest item in outer loop
                 smallest_index = j
         # TO-DO: swap
         arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
     return arr
 
+
 # In **Bubble Sort**, we make a series of swaps between adjacent elements,
 # gradually moving larger elements towards the end of the array (or _bubbling_ larger elements up).
-
 # TO-DO:  implement the Bubble Sort function below
+
+
 def bubble_sort(arr):
     # subtract 1 from length of array to end at correct index
     for i in range(0, len(arr) - 1):
@@ -36,6 +39,8 @@ def bubble_sort(arr):
                 # swap (trade places)
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
     return arr
+
+
 
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
